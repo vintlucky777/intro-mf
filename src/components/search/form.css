@@ -1,0 +1,62 @@
+.form {
+	background-color: #f6f6f6;
+	border-color: 1px solid #ccc;
+	border-radius: 2px;
+	box-shadow: 0 3px 3px rgba(255,255,255,.1);
+	padding: 8px;
+	width: 100%;
+}
+
+.primary {
+  position: relative;
+}
+
+.primary-input {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px;
+  height: 40px;
+}
+
+.primary-input-icon {
+  position: absolute;
+  right: 12px;
+  top: 6px;
+  font-size: 24px;
+  pointer-events: none;
+}
+
+.auxillary {
+  font-size: 80%;
+  position: relative;
+  margin-top: 12px;
+  color: #888;
+}
+
+.input-adult-content {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.input-api-key {
+  margin-right: 24px;
+  margin-left: 4px;
+}
+
+.input-api-key input {
+  display: inline-block;
+  font-size: 100%;
+  max-width: 300px;
+  margin-left: 4px;
+  color: #888;
+  background: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #ccc;
+  padding: 4px;
+  box-shadow: none;
+}
+
+.input-api-key input:focus {
+  box-shadow: none;
+}

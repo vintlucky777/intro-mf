@@ -1,0 +1,18 @@
+.block {
+  padding-top: 12px;
+}
+
+.total-top,
+.total-bottom {
+  font-size: 80%;
+  margin-bottom: 12px;
+  margin-left: 12px;
+  color: #555;
+}
+
+.total-bottom {
+  padding: 8px 0;
+}
+
+.items {
+}
