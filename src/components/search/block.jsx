@@ -12,6 +12,10 @@ import styles from './block.css';
 
 const INPUT_DEBOUNCE_INTERVAL = 400;
 
+/**
+ * SearchBlock manages the logic of search form input, fires the API requests
+ * and renders the results with exact MovieCard or BroadResults
+ */
 class SearchBlock extends React.Component {
   constructor(props) {
     super(props);
@@ -43,7 +47,8 @@ class SearchBlock extends React.Component {
 
     this.setState({form});
 
-    if (form.search_query) {
+    // perform a search if we have somthing to search with a api_key
+    if (form.search_query && form.api_key) {
       this.debouncedSearchMovies(form);
     } else {
       this.debouncedSearchMovies.cancel();
