@@ -14,14 +14,17 @@ class App extends Component {
 
     const storedConfig = config.get();
 
-    this.state = {
-      config: config,
-    }
-
+    // attempt to refresh config on app start,
+    // if there is a stored config apikey.
     if (storedConfig.apiKey) {
       getAPIConfig().then(
-        () => this.setState({config: config.get()}),
-        () => {},
+        () => {
+          // config received, yeah!
+        },
+        () => {
+          // the stored API key may be incorrect. or a network died.
+          // ignore the error
+        },
       );
     }
   }

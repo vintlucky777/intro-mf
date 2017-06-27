@@ -68,10 +68,9 @@ export function findMovieByIMDBId(imdbId, options = {}) {
   }).then(filterResults);
 };
 
-// Search for movies given user input. Don't judge, what it was, just
-// try to use it either as IMDBid or text and simply do two requests.
-// TODO: A more sophisticated approach would involve regexps, to chech if
-// user's input matches to IMDBid-pattern
+// Search for movies given user input. Don't judge, what the user typed in,
+// just try to use it either as TMDBid, IMDBid or text and simply do several
+// requests in parallel.
 export function searchMovies(nameOrId, options = {}) {
   return Promise.all([
     getMovieById(nameOrId, options),

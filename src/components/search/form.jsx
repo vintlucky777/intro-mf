@@ -1,6 +1,8 @@
 import React, {PropTypes} from 'react';
 import styles from './form.css';
 
+// SearchForm is a simple search form, that fires callbacks on input change
+// and on submit
 class SearchForm extends React.Component {
   static propTypes = {
     defaultValues: PropTypes.object,
@@ -9,8 +11,8 @@ class SearchForm extends React.Component {
   };
 
   static defaultProps = {
-    onSubmit: (...args) => {console.warn('this.props.onSubmit()', args)},
-    onInputChange: (...args) => {console.warn('this.props.onInputChange()', args)},
+    onSubmit: (...args) => {},
+    onInputChange: (...args) => {},
   };
 
   constructor(props) {

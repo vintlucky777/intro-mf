@@ -5,7 +5,7 @@ import config from 'src/config';
 // we'll make it once in 24 hours
 const CONFIG_UPDATE_INTERVAL = 24*60*60*1000;
 
-// Broad search movies given a text query
+// Request API config, that contains image store paths, available sizes and more
 export function getAPIConfig() {
   const {apiConfig, lastConfigUpdateAt} = config.get();
   const lastUpdatedAt = lastConfigUpdateAt
@@ -13,6 +13,7 @@ export function getAPIConfig() {
     : null;
   const now = new Date();
 
+  // if the config is "fresh", give it out as it is
   if (now - lastUpdatedAt < CONFIG_UPDATE_INTERVAL) {
     return Promise.resolve(apiConfig);
   }
@@ -22,7 +23,7 @@ export function getAPIConfig() {
     config.setItem('lastConfigUpdateAt', new Date().toISOString());
 
     // in case the user keeps the tab opened, schedule
-    // app config refetch
+    // app config refresh
     setTimeout(getAPIConfig, CONFIG_UPDATE_INTERVAL);
   });
 };

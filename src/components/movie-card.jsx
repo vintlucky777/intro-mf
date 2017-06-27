@@ -4,6 +4,7 @@ import styles from './movie-card.css';
 import Poster from 'src/components/movie-poster';
 import {pluralize} from 'src/utils/utils';
 
+// MovieCard has a quite obvious purpose. Also it has two display options
 class MovieCard extends React.Component {
   shouldComponentUpdate(nextProps) {
     return this.props.data !== nextProps.data;

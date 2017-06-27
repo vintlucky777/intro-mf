@@ -3,6 +3,7 @@ import cs from 'classnames';
 import _ from 'lodash';
 import config from 'src/config';
 
+// MoviePoster smart-renders a poster for movie, given the partial image path
 class MoviePoster extends React.Component {
   // `getPosterSize()` selects the best suitable movie poster width.
   // the complex part here is picking from available downscaled image sizes

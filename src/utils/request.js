@@ -1,6 +1,9 @@
 import config from 'src/config';
 import qs from 'query-string';
 
+/**
+ * a generic method to perform a API call given a specific REST path
+ */
 export function apiRequest(path, options = {}) {
   const {apiHost, apiKey} = config.get();
 
