@@ -1,0 +1,12 @@
+MovieSearch:
+  ✔ init project with create-react-app @done(2017-06-26 14:00) @project(MovieSearch)
+  ✔ eject, customise css-modules @done(2017-06-26 14:10) @project(MovieSearch)
+  ✔ add lodash, classnames and query-string @done(2017-06-26 14:12) @project(MovieSearch)
+  ✔ sketch up app components structure @done(2017-06-26 14:30) @project(MovieSearch)
+  ✔ search form @done(2017-06-26 15:13) @project(MovieSearch)
+  ✔ search block manager @done(2017-06-26 21:02) @project(MovieSearch)
+  ✔ write api calls and required utils @done(2017-06-26 21:20) @project(MovieSearch)
+  ✔ search results and movie cards @done(2017-06-26 22:30) @project(MovieSearch)
+  ✔ implement API-key prompt logic @done(2017-06-26 23:06) @project(MovieSearch)
+  ✔ implement async API-config update @done(2017-06-26 23:25) @project(MovieSearch)
+  ✔ debug the app @done(2017-06-27 12:02) @project(MovieSearch)
