@@ -1,6 +1,9 @@
 import {apiRequest} from 'src/utils/request';
 import config from 'src/config';
 
+// TODO: take the refresh and freshness logic away from this file.
+//       it should only be about performing the API call
+
 // recommended config update interval is to check it once every few days.
 // we'll make it once in 24 hours
 const CONFIG_UPDATE_INTERVAL = 24*60*60*1000;

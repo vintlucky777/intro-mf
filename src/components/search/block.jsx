@@ -37,6 +37,9 @@ class SearchBlock extends React.Component {
   handleFormChange(form) {
     const {form: prevForm} = this.state;
 
+    this.setState({form});
+
+    // if API key changed, try to refetch the config
     if (prevForm.api_key !== form.api_key) {
       config.setItem('apiKey', form.api_key);
 
@@ -44,8 +47,6 @@ class SearchBlock extends React.Component {
         getAPIConfig().catch(error => this.setState({error}));
       }
     }
-
-    this.setState({form});
 
     // perform a search if we have somthing to search with a api_key
     if (form.search_query && form.api_key) {
@@ -80,6 +81,9 @@ class SearchBlock extends React.Component {
       }).catch(error => this.setState({loading: false, error}));
   }
 
+  // debounced version of the function above.
+  // fires no sooner then X ms after last invokation.
+  // good for live search on text input
   debouncedSearchMovies = _.debounce(
     (criteria) => this.searchMovies(criteria),
     INPUT_DEBOUNCE_INTERVAL,
