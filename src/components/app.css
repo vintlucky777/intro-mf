@@ -1,14 +1,10 @@
 .app {
+  max-width: 900px;
+  margin: auto;
+}
+
+.app-title {
+  color: #fff;
+  font-weight: 300;
   text-align: center;
-}
-
-.app-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.app-intro {
-  font-size: large;
 }

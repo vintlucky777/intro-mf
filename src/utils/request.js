@@ -1,23 +1,21 @@
-// TODO: here I'll have generic `apiRequest()` method and some more request
-// utils and handlers
-
 import config from 'src/config';
 import qs from 'query-string';
-import store from 'src/store/store';
 
 export function apiRequest(path, options = {}) {
-  const currentState = store.getState();
-  const {apiKey} = currentState.preferences;
-
-  if (!apiKey) {
-    return Promise.reject(new Error('API key not specified'));
-  }
+  const {apiHost, apiKey} = config.get();
 
   const {query, ...otherOptions} = options;
-  const fullQuery = {...query, apiKey: apiKey};
+  const fullQuery = {...query, api_key: apiKey};
 
-  const url = `${config.apiHost}${path}`
+  const url = `${apiHost}${path}`
   const urlWithQuery = url + '?' + qs.stringify(fullQuery);
 
-  return fetch(urlWithQuery, otherOptions).then(res => res.json());
+  return fetch(urlWithQuery, otherOptions)
+    .then(res => {
+      if (!res.ok) {
+        throw new Error(res.statusText);
+      }
+
+      return res.json();
+    });
 }

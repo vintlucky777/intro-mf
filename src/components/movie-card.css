@@ -1,0 +1,83 @@
+.card {
+  background-color: #fff;
+  padding: 12px;
+  display: flex;
+  align-items: flex-start;
+}
+.card:after {
+  /* the clearfix hack :( */
+  content: '';
+  display: table;
+  clear: both;
+}
+.card:hover {
+  background-color: #fbfbfb;
+}
+.poster {
+  margin-right: 12px;
+  border-radius: 2px;
+  flex: 0 0 auto;
+}
+.poster-empty {
+  display: inline-flex;
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  color: #888;
+}
+.info {
+  flex: 1 1 auto;
+}
+.id {
+  font-size: 60%;
+  color: #888;
+}
+.rating {
+  font-size: 90%;
+}
+.title {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  font-size: 120%;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+.description {
+
+}
+.description-narrow {
+  margin-top: 4px;
+  max-width: 600px;
+  font-size: 90%;
+}
+
+.card-detailed {
+  padding: 12px;
+}
+
+.card-detailed p {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+@media(max-width:620px) {
+  .card-detailed {
+    display: block;
+  }
+}
+
+.card-detailed .title {
+  margin-bottom: 4px;
+}
+
+.card-detailed .release-year {
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.card-detailed .synopsis-title {
+  font-weight: 400;
+  margin-bottom: 4px;
+  font-size: 100%;
+}
