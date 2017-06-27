@@ -10,6 +10,7 @@ MovieSearch:
   ✔ implement API-key prompt logic @done(2017-06-26 23:06) @project(MovieSearch)
   ✔ implement async API-config update @done(2017-06-26 23:25) @project(MovieSearch)
   ✔ debug the app @done(2017-06-27 12:02) @project(MovieSearch)
+  ☐ migrate heroku deploy to a better option https://github.com/mars/create-react-app-buildpack
   ☐ move the logic of freshness and auto refresh outside from `src/api/configuration`
   ☐ pick a better name for `src/components/search/block`
   ☐ consider splitting <MovieCard/> into <MovieCard/> and <MovieCardDetailed/>
